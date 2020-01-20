@@ -1,6 +1,7 @@
 const express = require("express");
 const bodyParser = require("body-parser");
 const path = require("path");
+const axios = require("axios").default;
 
 //Connection to database
 const connect = require("./config/connection");

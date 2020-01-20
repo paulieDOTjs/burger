@@ -10,28 +10,40 @@
       integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
       crossorigin="anonymous"
     />
+    <link
+      href="https://fonts.googleapis.com/css?family=Amatic+SC|Permanent+Marker|Sacramento|Zhi+Mang+Xing&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="/styles/styles.css" />
-    <title>Burger App</title>
+    <title>BURGER APP</title>
   </head>
   <body>
-    <h1 class="d-flex justify-content-center">
-      burger app
-    </h1>
-    <div class="d-flex justify-content-center">
-      <input type="text" id="burgerName" />
-      <button id="button">add burger</button>
-    </div>
+    <header>
+      <h1 class="d-flex justify-content-center">
+        BURGER APP
+      </h1>
+    </header>
     <div class="container">
-      <div class="row ">
-        <div class="col-6 d-flex justify-content-center" id="notConsumed">
-          Not consumed
+      <section class="mt-5 main-section">
+        <div class="row mt-2">
+          <ul class="col-6 col-md-4" id="notdevoured"></ul>
+          <div class="col-12 col-md-4">
+            <div class="row">
+              <div class="col">
+                <input type="text" id="burgerName" />
+              </div>
+            </div>
+            <div class="row">
+              <div class="col">
+                <button id="button">Place order</button>
+              </div>
+            </div>
+          </div>
+          <ul class="col-6 col-md-4" id="devoured"></ul>
         </div>
-        <div class="col-6 d-flex justify-content-center" id="consumed">
-          consumed
-        </div>
-      </div>
+      </section>
     </div>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="/scripts/index.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.1/axios.js" integrity="sha256-J6UlS3kpnhiSiNQ9lGoV9Q94ZpIPff3UZcR0dDwIT6g=" crossorigin="anonymous"></script>
   </body>
 </html>

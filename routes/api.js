@@ -12,15 +12,17 @@ router.get("/burgers", (req, res) =>
     .catch(err => console.log(err))
 );
 
-router.post("/add", (req, res) => {
-  console.log(req.body);
-  db.Burger.create(req.body)
-    .then(function() {
-      res.redirect("/");
+router.post("/add", (req, res) =>
+  Burger.create({
+    name: req.body
+  })
+    .then(burgers => {
+      console.log(burgers);
+      console.log(res);
+      // console.log("res" + res);
+      res.send(burgers);
     })
-    .catch(function(err) {
-      console.log(err);
-    });
-});
+    .catch(err => console.log(err))
+);
 
 module.exports = router;
