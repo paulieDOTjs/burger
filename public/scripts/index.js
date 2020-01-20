@@ -39,8 +39,6 @@ fakeData = [
 ];
 
 function renderBurgers() {
-  devouredEl.innerHTML = "Served";
-  notDevouredEl.innerHTML = "Waiting";
   axios.get("/api/burgers").then(function(response) {
     console.log(response);
     burgers = fakeData;
