@@ -51,6 +51,12 @@ li {
 button {
   letter-spacing: 8px;
   font-weight: bolder;
+  transition: .5s;
+}
+
+button:hover {
+    background-color: #cf240a;
+    transition: .5s;
 }
 button,
 input {
@@ -63,6 +69,6 @@ input {
   text-shadow: 1px 0 black;
 }
 
-input{
-    text-align: center;
+input {
+  text-align: center;
 }
