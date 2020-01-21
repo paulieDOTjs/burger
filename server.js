@@ -10,6 +10,8 @@ const db = require("./models/Burger");
 
 const app = express();
 
+app.use(express.urlencoded({ extended: false }));
+app.use(express.json());
 app.use(express.static("public"));
 
 app.get("/", function(req, res) {
