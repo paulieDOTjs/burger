@@ -6,6 +6,13 @@ body {
   text-transform: uppercase;
 }
 
+::selection {
+  background: none; /* WebKit/Blink Browsers */
+}
+::-moz-selection {
+  background: none; /* Gecko Browsers */
+}
+
 .row {
   justify-content: center;
 }
@@ -41,17 +48,26 @@ ul {
   text-align: center;
   list-style: none;
   padding: 0;
+align-items: center;
 }
 
 li {
   text-align: center;
   font-size: 32px;
   color: #ffbc11;
+  margin-left: 10px;
+  margin-right: 10px;
+  width: max-content;
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  overflow-wrap: break-word;
 }
 
 li:hover {
   color: #cf240a;
-  transition: 0.5s;
+  background-color: #ffbc11;
+  font-weight: bolder;
   cursor: pointer;
 }
 
