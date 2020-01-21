@@ -13,12 +13,12 @@ router.get("/burgers", (req, res) =>
 );
 
 router.post("/add", (req, res) =>
-  Burger.create({
-    name: req.body
-  })
+    Burger.create({
+        name: req.body.name
+      })
     .then(burgers => {
       console.log(burgers);
-      console.log(res);
+      console.log(req);
       // console.log("res" + res);
       res.send(burgers);
     })

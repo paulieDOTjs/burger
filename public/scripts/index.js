@@ -3,46 +3,9 @@ const buttonEl = document.getElementById("button");
 const devouredEl = document.getElementById("devoured");
 const notDevouredEl = document.getElementById("notdevoured");
 
-fakeData = [
-  {
-    name: "stupidBurger",
-    devoured: 0
-  },
-  {
-    name: "stupidBurger",
-    devoured: 1
-  },
-  {
-    name: "stupidBurger",
-    devoured: 1
-  },
-  {
-    name: "stupidBurger",
-    devoured: 1
-  },
-  {
-    name: "stupidBurger",
-    devoured: 1
-  },
-  {
-    name: "stupidBurger",
-    devoured: 1
-  },
-  {
-    name: "stupidBurger",
-    devoured: 0
-  },
-  {
-    name: "stupidBurger",
-    devoured: 0
-  }
-];
-
 function renderBurgers() {
   axios.get("/api/burgers").then(function(response) {
-    console.log(response);
-    burgers = fakeData;
-    // burgers = response.data;
+    burgers = response.data;
     for (let i = 0; i < burgers.length; i++) {
       burger = burgers[i];
       burgerEl = document.createElement("li");
@@ -61,7 +24,7 @@ buttonEl.addEventListener("click", () => {
   console.log(name);
   axios
     .post("/api/add", {
-      name: name
+      name
     })
     .then(function(response) {
       console.log(response);
