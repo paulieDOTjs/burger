@@ -1,9 +1,11 @@
 body {
-  background-image: url(/images/burger.jpeg);
+  background-image: url(/images/burgerbbbb.jpg);
+  background-size: 400px;
   font-family: "Amatic SC", cursive;
-  letter-spacing: 2px;
+  letter-spacing: 12px;
   text-shadow: 1px 0 black;
   text-transform: uppercase;
+  cursor: default;
 }
 
 ::selection {
@@ -48,7 +50,7 @@ ul {
   text-align: center;
   list-style: none;
   padding: 0;
-align-items: center;
+  align-items: center;
 }
 
 li {
@@ -69,6 +71,7 @@ li:hover {
   background-color: #ffbc11;
   font-weight: bolder;
   cursor: pointer;
+  text-decoration: underline;
 }
 
 button {
@@ -91,9 +94,11 @@ input {
   color: #ffbc11;
   text-shadow: 1px 0 black;
   text-transform: uppercase;
+  letter-spacing: 12px;
 }
 
 input {
+  letter-spacing: 12px;
   text-align: center;
   letter-spacing: 2px;
 }

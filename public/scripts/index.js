@@ -2,6 +2,7 @@ const burgerNameEl = document.getElementById("burgerName");
 const buttonEl = document.getElementById("button");
 const devouredEl = document.getElementById("devoured");
 const notDevouredEl = document.getElementById("notdevoured");
+const background = ["burgerbbbb.jpg", "burger.jpeg", "burgerbb.jpeg"];
 
 /***********************************
   This renders the burgers onto the 

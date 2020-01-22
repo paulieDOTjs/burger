@@ -3,16 +3,19 @@
 
 const Sequelize = require("sequelize");
 
-const connect = new Sequelize("burgersDB", "root", "root", {
-  host: "localhost",
-  dialect: "mysql",
-  port: '8889',
-  pool: {
-    max: 5,
-    min: 0,
-    acquire: 30000,
-    idle: 10000
-  }
-});
+const env = process.env.NODE_ENV || "development";
+let config = require(__dirname + "/config.json")[env];
 
-module.exports = connect;
+let sequelize;
+if (config.use_env_variable) {
+  sequelize = new Sequelize(process.env[config.use_env_variable], config);
+} else {
+  sequelize = new Sequelize(
+    config.database,
+    config.username,
+    config.password,
+    config
+  );
+}
+
+module.exports = sequelize;

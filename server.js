@@ -3,7 +3,6 @@ require("dotenv").config();
 const express = require("express");
 const path = require("path");
 
-
 //Connection to database
 const connect = require("./config/connection");
 
@@ -16,11 +15,10 @@ app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 app.use(express.static("public"));
 
+//routes
 app.get("/", function(req, res) {
   res.sendFile(path.join(__dirname, "../public/index.html"));
 });
-
-//routes
 app.use("/api/", require("./routes/api.js"));
 
 const PORT = process.env.PORT || 3000;
