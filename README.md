@@ -10,6 +10,7 @@ This app is an easy to use app for keeping track of burger orders at a restauran
 https://move-burger.herokuapp.com/
 
 # Images
+![Gif of working burger app](https://github.com/paulrobhendrickson/burger/blob/master/public/images/borger.gif?raw=true)
 
 # Installation
 NPM install should be run, NPM start should be run after. A local MySQL connection is required for this app. I used MAMP for development.
